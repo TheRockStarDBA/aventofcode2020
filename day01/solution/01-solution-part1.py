@@ -15,7 +15,7 @@ def two_sum(arr, target):
     """
     left = 0
     right = len(arr) - 1
-    if arr is None:
+    if arr == None or len(arr) == 0:
         return "array length is 0"
     while left < right:
         curr = arr[left] + arr[right]
@@ -42,7 +42,7 @@ def read_file_to_sorted_array(input_file):
 
 def main():
     file_number_array_sorted = read_file_to_sorted_array(filename)
-    results = two_sum(file_number_array_sorted, target=3021)
+    results = two_sum(file_number_array_sorted, target=2020)
     print(results)
     print(sum(results))
     print(results[0] * results[1])
